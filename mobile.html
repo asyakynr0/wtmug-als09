@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğrenci Modu - P2P Dosya Transferi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>👨‍🎓 Öğrenci Modu</h1>
+        <p>Öğretmenden dosya al</p>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h2>Öğretmene Bağlan</h2>
+
+            <p>Öğretmenin bağlantı ID'sini girin.</p>
+
+            <input
+                type="text"
+                id="teacherId"
+                placeholder="Öğretmen ID'si"
+            >
+
+            <div id="qrSection">
+                <button id="scanBtn">
+                    📷 Kamera ile QR Okut
+                </button>
+            </div>
+
+            <button id="connectBtn">
+                Bağlan
+            </button>
+
+            <p id="connectionStatus"></p>
+
+            <button onclick="window.location.href='index.html'">
+                Ana Sayfaya Dön
+            </button>
+        </section>
+    </main>
+    <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+    <script src="mobile.js"></script>
+
+    
+
+</body>
+</html>

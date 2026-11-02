@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoca Modu - P2P Dosya Transferi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>👨‍🏫 Hoca Modu</h1>
+        <p>Dosya gönderme paneli</p>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h2>Dosya Gönder</h2>
+
+            <p>Öğrencilere göndermek istediğiniz dosyayı seçin.</p>
+
+            <input type="file" id="fileInput">
+
+            <p id="fileInfo"></p>
+
+            <div id="connectionArea" style="display:none; margin-top:25px;">
+                <h3>Öğretmen Bağlantı ID'si</h3>
+
+                <p id="teacherId"
+                   style="font-weight:bold; font-size:20px; margin:15px;">
+                </p>
+
+                <h3>QR Kod</h3>
+
+                <div id="qrcode"
+                     style="display:flex; justify-content:center; margin:20px;">
+                </div>
+
+                <p>Öğrenciler bu QR kodu okutarak bağlanabilir.</p>
+            </div>
+
+            <button onclick="window.location.href='index.html'">
+                Ana Sayfaya Dön
+            </button>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+
+    <script src="teacher.js"></script>
+
+</body>
+</html>
+
